@@ -35,7 +35,7 @@ const { sections } = Astro.props
 		</div>
 
 		<div class="relative max-lg:aspect-square max-lg:w-full lg:absolute lg:inset-x-6 lg:top-[calc(48px+7rem)]">
-			<div class="clip-donut animate-spinner absolute top-0 flex aspect-square w-full items-start justify-center">
+			<div class="clip-donut animate-spinner absolute top-0 flex aspect-square w-full items-start justify-center overflow-clip rounded-full">
 				{
 					sections.map(({ image, rotate, active }, index) =>
 						active ? (
@@ -44,7 +44,7 @@ const { sections } = Astro.props
 							</a>
 						) : (
 							<div class:list={['clip-pie absolute h-1/2 w-3/10 origin-bottom bg-blue-900', rotate]}>
-								<Image class="absolute w-full transition-opacity hover:opacity-50" src={image} width={490} densities={[2]} loading="eager" fetchpriority="high" alt="" format="avif" quality={50} />
+								<Image class="absolute w-full opacity-50" src={image} width={490} densities={[2]} loading="eager" fetchpriority="high" alt="" format="avif" quality={50} />
 								<div class="absolute top-0 left-0 flex aspect-video w-full items-center justify-center">
 									<SvgLock class="w-1/12" />
 								</div>
@@ -55,9 +55,9 @@ const { sections } = Astro.props
 			</div>
 		</div>
 
-		<div class="gsap-hero relative mb-6 max-w-114 text-balance">
-			<h1 class="font-display text-3xl font-bold text-white uppercase md:text-5xl">Experiencias 10/10: un verano con tu mejor versión</h1>
-			<p class="my-6">Este verano, cada experiencia cuenta. Desde un showcooking con cocina de proximidad hasta un brindis al atardecer después de un baño en el mar. Vive momentos inolvidables junto a <a class="underline" target="_blank" href="https://www.ballantines.com/es-es/bebidas/">Ballantine’s</a> y con un enfoque más consciente</p>
+		<div class="gsap-hero relative mb-6 max-w-160 text-balance">
+			<h1 class="font-display text-3xl font-bold text-white uppercase md:text-4xl">Experiencias 10/10: un verano con tu mejor versión</h1>
+			<p class="my-3">Este verano, cada experiencia cuenta. Desde un showcooking con cocina de proximidad hasta un brindis al atardecer después de un baño en el mar. Vive momentos inolvidables junto a <a class="underline" target="_blank" href="https://www.ballantines.com/es-es/bebidas/">Ballantine’s</a> y con un enfoque más consciente</p>
 			<a class="gsap-anchor mx-auto block w-4 animate-bounce" href="#down"><SvgArrow /></a>
 		</div>
 	</div>
