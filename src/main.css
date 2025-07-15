@@ -1,0 +1,96 @@
+@font-face {
+	font-family: 'Archivo Narrow';
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: 'swap';
+	src: url(/archivo-narrow-400-700.woff2) format('woff2-variations');
+}
+
+@font-face {
+	font-family: 'Interstate Condensed';
+	font-style: normal;
+	font-weight: 700;
+	font-display: 'swap';
+	src: url(/interstate-condensed-700.woff2) format('woff2');
+}
+
+@import 'tailwindcss';
+
+@theme {
+	--default-transition-duration: 0.3s;
+	--font-sans: 'Archivo Narrow', sans-serif;
+	--font-display: 'Interstate Condensed', sans-serif;
+	--breakpoint-sm: 28rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: initial;
+	--color-blue-900: oklch(0.4 0.23 275.3);
+	--color-blue-950: oklch(0.25 0.14 275.3);
+	--color-blue-975: oklch(0.15 0.09 275.3);
+	--color-purple-300: oklch(0.83 0.07 300.91);
+	--animate-spinner: spinner 20s cubic-bezier(0.4, 1.5, 0.6, 1) infinite;
+	@keyframes spinner {
+		0%,
+		5% {
+			rotate: 0deg;
+		}
+		10%,
+		15% {
+			rotate: 36deg;
+		}
+		20%,
+		25% {
+			rotate: 72deg;
+		}
+		30%,
+		35% {
+			rotate: 108deg;
+		}
+		40%,
+		45% {
+			rotate: 144deg;
+		}
+		50%,
+		55% {
+			rotate: 180deg;
+		}
+		60%,
+		65% {
+			rotate: 216deg;
+		}
+		70%,
+		75% {
+			rotate: 252deg;
+		}
+		80%,
+		85% {
+			rotate: 288deg;
+		}
+		90%,
+		95% {
+			rotate: 324deg;
+		}
+		100% {
+			rotate: 360deg;
+		}
+	}
+}
+
+@layer base {
+	html {
+		@apply bg-black text-purple-300 max-[400px]:text-[4vw] min-[1281px]:text-[1.25vw] min-[1920px]:text-[24px];
+	}
+}
+
+@utility container {
+	@apply mx-auto px-6 md:px-12 xl:px-24;
+}
+
+@utility clip-donut {
+	clip-path: url(#clip-donut);
+}
+
+@utility clip-pie {
+	clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+}
