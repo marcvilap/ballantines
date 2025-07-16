@@ -25,16 +25,16 @@ import imgPicture09 from '@/assets/images/picture-09.webp'
 import imgPicture10 from '@/assets/images/picture-10.webp'
 
 const sections = [
-	{ image: imgBanner01, rotate: 'rotate-36', active: true },
-	{ image: imgBanner02, rotate: 'rotate-72', active: true },
-	{ image: imgBanner03, rotate: 'rotate-108', active: true },
-	{ image: imgBanner04, rotate: 'rotate-144', active: false },
-	{ image: imgBanner05, rotate: 'rotate-180', active: false },
-	{ image: imgBanner06, rotate: 'rotate-216', active: false },
-	{ image: imgBanner07, rotate: 'rotate-252', active: false },
-	{ image: imgBanner08, rotate: 'rotate-288', active: false },
-	{ image: imgBanner09, rotate: 'rotate-324', active: false },
-	{ image: imgBanner10, rotate: 'rotate-360', active: false },
+	{ image: imgBanner01, rotate: 'rotate-324', active: true },
+	{ image: imgBanner02, rotate: 'rotate-360', active: true },
+	{ image: imgBanner03, rotate: 'rotate-36', active: true },
+	{ image: imgBanner04, rotate: 'rotate-72', active: false },
+	{ image: imgBanner05, rotate: 'rotate-108', active: false },
+	{ image: imgBanner06, rotate: 'rotate-144', active: false },
+	{ image: imgBanner07, rotate: 'rotate-180', active: false },
+	{ image: imgBanner08, rotate: 'rotate-216', active: false },
+	{ image: imgBanner09, rotate: 'rotate-252', active: false },
+	{ image: imgBanner10, rotate: 'rotate-288', active: false },
 ]
 ---
 
@@ -45,111 +45,113 @@ const sections = [
 		<div class="gsap-text container grid max-w-xl gap-6">
 			<p>La vida es demasiado corta para no probar cosas nuevas. Es cierto que las personas somos seres de costumbres, pero también nos mueve la inquietud. Si lo piensas, ¡solo los valientes que se atreven a abrir nuevos caminos disfrutan primero de <strong>ese verdadero placer que supone vivir experiencias únicas e inolvidables!</strong> El resto viene después. Lo que está claro es que, si la idea la sacas de un reel, casi seguro estará ya masificada para cuando quieras llevar a cabo tú el plan…</p>
 			<p>De todas las estaciones del año, el verano es el mejor momento para ser tu mejor versión. En verano somos más libres, nos sentimos más ligeros. ¿Cuál es el auténtico reto? Lograr probar nuevas opciones pero manteniéndonos <strong>fieles a nosotros mismos.</strong></p>
-			<p>Planes reales, auténticos, conscientes, creados por ti y disfrutados por quienes tú quieras. Sintiendo cada momento como si fuera el último. “La excelencia y mantenerse fiel a uno mismo siempre estarán a tu lado”, decía George Ballantine. Y tenía razón. <strong>Tú marcas las reglas. Esa debe ser la filosofía.</strong></p>
-			<p>Vamos a inspirarnos un poco:</p>
+			<p>
+				Planes reales, auténticos, conscientes, creados por ti y disfrutados por quienes tú quieras. Sintiendo cada momento como si fuera el último. “La excelencia y mantenerse fiel a uno mismo siempre estarán a tu lado”, decía George Ballantine. Y tenía razón. <strong>Tú marcas las reglas. Esa debe ser la filosofía.</strong>
+				<p>Vamos a inspirarnos un poco:</p>
+			</p>
 		</div>
+
+		{
+			sections[0].active && (
+				<BlockInfo id="section-1" banner={imgBanner01} image={imgPicture01} title="Dormir bajo las estrellas en el desierto de Tabernas">
+					<p>No hace falta irse a Marruecos para vivir una noche en el desierto. En Tabernas, el único desierto de Europa, puedes dormir al raso sobre una esterilla o en una tienda glamping entre formaciones rocosas y cielos completamente despejados. Sin cobertura, sin distracciones. Solo tú, el silencio y una inmensidad que te recuerda lo pequeño (y a la vez grande) que eres.</p>
+					<p>Una esterilla, una hoguera, un cielo estrellado sin filtros. La noche se vuelve mágica cuando desconectas del mundo y conectas contigo. En ese momento de calma absoluta, un Ballantine’s & Ginger Ale entre amigos sabe todavía mejor. Porque no hay nada más auténtico que brindar en medio de la nada.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[1].active && (
+				<BlockInfo id="section-2" banner={imgBanner02} image={imgPicture02} title="Road trip musical por la costa gallega" inverse>
+					<p>¿Y si tu verano tiene banda sonora? Elige una playlist, sube a tu coche y recorre la Costa da Morte, parando en faros solitarios, pequeñas playas escondidas y pueblos marineros donde el pulpo sabe diferente. Un viaje de carretera que se adapta a ti, con conciertos improvisados al borde del acantilado y noches con sabor a salitre.</p>
+					<p>Parar en un camping /casa /hotel en una cala vacía al terminar el día, sacar los altavoces y preparar un brindis con Ballantine’s mientras ves romper las olas. Porque todo viaje se merece una pausa con sabor. Porque tú decides el ritmo y cómo celebrarlo.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[2].active && (
+				<BlockInfo id="section-3" banner={imgBanner03} image={imgPicture03} title="Ruta en tren vintage por la Serra de Tramuntana">
+					<p>El tren de Sóller es más que un medio de transporte: es una cápsula del tiempo que cruza naranjales, túneles y valles con el ritmo lento de otro siglo. Con su madera antigua y su traqueteo nostálgico, es un viaje de los que no se hacen por necesidad, sino por placer. Un viaje que invita a observar sin prisa, a hablar más despacio, a dejar que el paisaje lo diga todo. Al llegar al puerto de Sóller, el mar te recibe como una postal en movimiento.</p>
+					<p>Ese es el momento perfecto para abrir tu mochila, sacar algo de picar y brindar con un Ballantine’s & Soda. Fresco, sencillo, honesto. Porque la magia de este plan no está en lo espectacular, sino en lo bien elegido. Tú decides cómo convertir un simple trayecto en un recuerdo imborrable. A veces, lo más simple se convierte en leyenda cuando lo haces a tu manera.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[3].active && (
+				<BlockInfo id="section-4" banner={imgBanner04} image={imgPicture04} title="Festival de cine disfrutando del cielo de Madrid" inverse>
+					<p>En Madrid, cuando cae el sol, los tejados cobran vida. Hay ciclos de cine independiente, catas sensoriales, DJ sets tranquilos. Elige una de esas azoteas menos conocidas, donde puedes ver una película con vistas al skyline mientras brindas con tu mejor versión. Perfecto para una noche urbana pero diferente.</p>
+					<p>Luces tenues, cine indie, el skyline de fondo. Una noche diferente para celebrar lo inesperado. ¿Y si le sumas una copa de Ballantine’s con hielo mientras comentas la peli? Elegancia urbana, autenticidad en cada sorbo. Porque tu verano también se merece momentos así.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[4].active && (
+				<BlockInfo id="section-5" banner={imgBanner05} image={imgPicture05} title="Kayak nocturno con plancton en la Costa Brava">
+					<p>Algunas noches de verano, el agua brilla cuando la tocas. Si tienes suerte, podrás remar bajo la luna y ver cómo el plancton bioluminiscente ilumina tu paso. Una experiencia que parece sacada de otro planeta, y que solo algunos viven porque llega sin anunciarse y dura poco. Pero si estás ahí en el momento exacto… no lo olvidarás.</p>
+					<p>Silencio, oscuridad, y de pronto… magia líquida bajo tus manos. Después del recorrido, toca descansar en la orilla con una bebida a la altura de la experiencia. Ballantine’s con tónica y un twist de lima: refrescante, luminoso, con personalidad. Como esa noche que no vas a olvidar.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[5].active && (
+				<BlockInfo id="section-6" banner={imgBanner06} image={imgPicture06} title="Taller de cerámica en un pueblo blanco de Andalucía" inverse>
+					<p>El arte de hacer algo con tus propias manos tiene algo terapéutico. Puedes apuntarte a un taller de cerámica en pueblos como Vejer o Frigiliana, donde el tiempo se detiene y las paredes encaladas reflejan el sol. Modelar, reír, concentrarte. Un plan slow que te conecta contigo y con siglos de tradición.</p>
+					<p>Crear con las manos, dejar huella, conectar con lo esencial. Y cuando termines tu obra, brindar por ella en un patio andaluz con un Ballantine’s & Lemon. Porque celebrar los pequeños logros también forma parte del viaje. La vida sabe mejor cuando tú la moldeas.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[6].active && (
+				<BlockInfo id="section-7" banner={imgBanner07} image={imgPicture07} title="Picnic sensorial entre viñedos en La Rioja">
+					<p>Mucho más que una cata de vinos: imagina una experiencia sensorial entre viñedos al atardecer, con mantas, música en directo suave y productos de kilómetro cero. Un picnic en el que cada sorbo y bocado tiene una historia, y cada historia se cuenta entre risas y miradas. Porque lo importante nunca es solo el lugar, sino cómo lo vives.</p>
+					<p>Música suave, uvas maduras, mantas sobre la hierba. Brindar por el ahora con un Ballantine’s & Ginger Ale, frutos rojos y hielo. Un picnic se transforma en experiencia cuando todo está pensado para ser vivido intensamente. Porque el mejor maridaje es el que haces tú.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[7].active && (
+				<BlockInfo id="section-8" banner={imgBanner08} image={imgPicture08} title="Ruta en bici eléctrica por los volcanes de La Garrotxa" inverse>
+					<p>No hace falta ser atleta para sentir la emoción del descubrimiento. Con una bici eléctrica puedes recorrer antiguos caminos de lava, bosques frondosos y pequeños pueblos medievales sin agotarte. Pausas para tomar algo, fotos sin prisa y la sensación de que el mundo se detiene un rato mientras tú sigues pedaleando.</p>
+					<p>Pedaleas suave, sin prisa, entre cráteres dormidos y bosques milenarios. Al finalizar la ruta y llegar a un claro, sacas una bebida fría y un par de vasos metálicos. Ballantine’s te acompaña, sutil pero presente, como ese amigo que no necesita hablar para estar ahí. Porque las mejores rutas siempre acaban con un buen brindis.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[8].active && (
+				<BlockInfo id="section-9" banner={imgBanner09} image={imgPicture09} title="Taller de cocina con productos del mar en Cádiz">
+					<p>Aprender a cocinar pescado recién traído de la lonja, con recetas que se han pasado de generación en generación. En un patio andaluz o frente al mar. Cortar, aliñar, probar. Y luego, compartir. Porque cocinar puede ser un acto íntimo, creativo, lleno de amor y sabor. Un viaje gastronómico con los pies descalzos.</p>
+					<p>Pescado fresco, sal en las manos, aroma a brasa. Aprendes, cocinas, y luego celebras con un Ballantine’s & Soda bien frío mientras cae el sol. Porque si lo auténtico empieza por lo que comes, también debe estar en lo que bebes. Menos es más… cuando es real.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections[9].active && (
+				<BlockInfo id="section-10" banner={imgBanner10} image={imgPicture10} title="Baño sonoro en una cueva en Mallorca" inverse>
+					<p>No todo plan necesita palabras. Algunos se sienten. Como un baño sonoro con cuencos tibetanos y vibraciones dentro de una cueva natural, rodeado de estalactitas, mientras fuera cae el sol sobre el Mediterráneo. Una experiencia meditativa que te deja renovado, como si hubieras reseteado el alma.</p>
+					<p>Cierras los ojos. Sientes cómo las vibraciones recorren tu cuerpo. Sales del baño sonoro renovado, con ganas de saborear el momento. En el silencio de la cueva, un Ballantine’s con hielo y un toque cítrico te ancla al presente. Porque el ritual no termina, solo evoluciona.</p>
+				</BlockInfo>
+			)
+		}
+
+		{
+			sections.filter(({ active }) => active).length < 10 && (
+				<section class="overflow-clip bg-blue-950 py-24">
+					<div class="gsap-text container">
+						<p class="font-display text-center text-5xl font-bold uppercase md:text-8xl">Próximamente</p>
+						<p class="mx-auto mt-6 w-12">
+							<SvgArrowDown />
+						</p>
+					</div>
+				</section>
+			)
+		}
 	</section>
-
-	{
-		sections[0].active && (
-			<BlockInfo id="section-1" banner={imgBanner01} image={imgPicture01} title="Dormir bajo las estrellas en el desierto de Tabernas">
-				<p>No hace falta irse a Marruecos para vivir una noche en el desierto. En Tabernas, el único desierto de Europa, puedes dormir al raso sobre una esterilla o en una tienda glamping entre formaciones rocosas y cielos completamente despejados. Sin cobertura, sin distracciones. Solo tú, el silencio y una inmensidad que te recuerda lo pequeño (y a la vez grande) que eres.</p>
-				<p>Una esterilla, una hoguera, un cielo estrellado sin filtros. La noche se vuelve mágica cuando desconectas del mundo y conectas contigo. En ese momento de calma absoluta, un Ballantine’s & Ginger Ale entre amigos sabe todavía mejor. Porque no hay nada más auténtico que brindar en medio de la nada.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[1].active && (
-			<BlockInfo id="section-2" banner={imgBanner02} image={imgPicture02} title="Road trip musical por la costa gallega" inverse>
-				<p>¿Y si tu verano tiene banda sonora? Elige una playlist, sube a tu coche y recorre la Costa da Morte, parando en faros solitarios, pequeñas playas escondidas y pueblos marineros donde el pulpo sabe diferente. Un viaje de carretera que se adapta a ti, con conciertos improvisados al borde del acantilado y noches con sabor a salitre.</p>
-				<p>Parar en un camping /casa /hotel en una cala vacía al terminar el día, sacar los altavoces y preparar un brindis con Ballantine’s mientras ves romper las olas. Porque todo viaje se merece una pausa con sabor. Porque tú decides el ritmo y cómo celebrarlo.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[2].active && (
-			<BlockInfo id="section-3" banner={imgBanner03} image={imgPicture03} title="Ruta en tren vintage por la Serra de Tramuntana">
-				<p>El tren de Sóller es más que un medio de transporte: es una cápsula del tiempo que cruza naranjales, túneles y valles con el ritmo lento de otro siglo. Con su madera antigua y su traqueteo nostálgico, es un viaje de los que no se hacen por necesidad, sino por placer. Un viaje que invita a observar sin prisa, a hablar más despacio, a dejar que el paisaje lo diga todo. Al llegar al puerto de Sóller, el mar te recibe como una postal en movimiento.</p>
-				<p>Ese es el momento perfecto para abrir tu mochila, sacar algo de picar y brindar con un Ballantine’s & Soda. Fresco, sencillo, honesto. Porque la magia de este plan no está en lo espectacular, sino en lo bien elegido. Tú decides cómo convertir un simple trayecto en un recuerdo imborrable. A veces, lo más simple se convierte en leyenda cuando lo haces a tu manera.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[3].active && (
-			<BlockInfo id="section-4" banner={imgBanner04} image={imgPicture04} title="Festival de cine disfrutando del cielo de Madrid" inverse>
-				<p>En Madrid, cuando cae el sol, los tejados cobran vida. Hay ciclos de cine independiente, catas sensoriales, DJ sets tranquilos. Elige una de esas azoteas menos conocidas, donde puedes ver una película con vistas al skyline mientras brindas con tu mejor versión. Perfecto para una noche urbana pero diferente.</p>
-				<p>Luces tenues, cine indie, el skyline de fondo. Una noche diferente para celebrar lo inesperado. ¿Y si le sumas una copa de Ballantine’s con hielo mientras comentas la peli? Elegancia urbana, autenticidad en cada sorbo. Porque tu verano también se merece momentos así.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[4].active && (
-			<BlockInfo id="section-5" banner={imgBanner05} image={imgPicture05} title="Kayak nocturno con plancton en la Costa Brava">
-				<p>Algunas noches de verano, el agua brilla cuando la tocas. Si tienes suerte, podrás remar bajo la luna y ver cómo el plancton bioluminiscente ilumina tu paso. Una experiencia que parece sacada de otro planeta, y que solo algunos viven porque llega sin anunciarse y dura poco. Pero si estás ahí en el momento exacto… no lo olvidarás.</p>
-				<p>Silencio, oscuridad, y de pronto… magia líquida bajo tus manos. Después del recorrido, toca descansar en la orilla con una bebida a la altura de la experiencia. Ballantine’s con tónica y un twist de lima: refrescante, luminoso, con personalidad. Como esa noche que no vas a olvidar.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[5].active && (
-			<BlockInfo id="section-6" banner={imgBanner06} image={imgPicture06} title="Taller de cerámica en un pueblo blanco de Andalucía" inverse>
-				<p>El arte de hacer algo con tus propias manos tiene algo terapéutico. Puedes apuntarte a un taller de cerámica en pueblos como Vejer o Frigiliana, donde el tiempo se detiene y las paredes encaladas reflejan el sol. Modelar, reír, concentrarte. Un plan slow que te conecta contigo y con siglos de tradición.</p>
-				<p>Crear con las manos, dejar huella, conectar con lo esencial. Y cuando termines tu obra, brindar por ella en un patio andaluz con un Ballantine’s & Lemon. Porque celebrar los pequeños logros también forma parte del viaje. La vida sabe mejor cuando tú la moldeas.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[6].active && (
-			<BlockInfo id="section-7" banner={imgBanner07} image={imgPicture07} title="Picnic sensorial entre viñedos en La Rioja">
-				<p>Mucho más que una cata de vinos: imagina una experiencia sensorial entre viñedos al atardecer, con mantas, música en directo suave y productos de kilómetro cero. Un picnic en el que cada sorbo y bocado tiene una historia, y cada historia se cuenta entre risas y miradas. Porque lo importante nunca es solo el lugar, sino cómo lo vives.</p>
-				<p>Música suave, uvas maduras, mantas sobre la hierba. Brindar por el ahora con un Ballantine’s & Ginger Ale, frutos rojos y hielo. Un picnic se transforma en experiencia cuando todo está pensado para ser vivido intensamente. Porque el mejor maridaje es el que haces tú.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[7].active && (
-			<BlockInfo id="section-8" banner={imgBanner08} image={imgPicture08} title="Ruta en bici eléctrica por los volcanes de La Garrotxa" inverse>
-				<p>No hace falta ser atleta para sentir la emoción del descubrimiento. Con una bici eléctrica puedes recorrer antiguos caminos de lava, bosques frondosos y pequeños pueblos medievales sin agotarte. Pausas para tomar algo, fotos sin prisa y la sensación de que el mundo se detiene un rato mientras tú sigues pedaleando.</p>
-				<p>Pedaleas suave, sin prisa, entre cráteres dormidos y bosques milenarios. Al finalizar la ruta y llegar a un claro, sacas una bebida fría y un par de vasos metálicos. Ballantine’s te acompaña, sutil pero presente, como ese amigo que no necesita hablar para estar ahí. Porque las mejores rutas siempre acaban con un buen brindis.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[8].active && (
-			<BlockInfo id="section-9" banner={imgBanner09} image={imgPicture09} title="Taller de cocina con productos del mar en Cádiz">
-				<p>Aprender a cocinar pescado recién traído de la lonja, con recetas que se han pasado de generación en generación. En un patio andaluz o frente al mar. Cortar, aliñar, probar. Y luego, compartir. Porque cocinar puede ser un acto íntimo, creativo, lleno de amor y sabor. Un viaje gastronómico con los pies descalzos.</p>
-				<p>Pescado fresco, sal en las manos, aroma a brasa. Aprendes, cocinas, y luego celebras con un Ballantine’s & Soda bien frío mientras cae el sol. Porque si lo auténtico empieza por lo que comes, también debe estar en lo que bebes. Menos es más… cuando es real.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections[9].active && (
-			<BlockInfo id="section-10" banner={imgBanner10} image={imgPicture10} title="Baño sonoro en una cueva en Mallorca" inverse>
-				<p>No todo plan necesita palabras. Algunos se sienten. Como un baño sonoro con cuencos tibetanos y vibraciones dentro de una cueva natural, rodeado de estalactitas, mientras fuera cae el sol sobre el Mediterráneo. Una experiencia meditativa que te deja renovado, como si hubieras reseteado el alma.</p>
-				<p>Cierras los ojos. Sientes cómo las vibraciones recorren tu cuerpo. Sales del baño sonoro renovado, con ganas de saborear el momento. En el silencio de la cueva, un Ballantine’s con hielo y un toque cítrico te ancla al presente. Porque el ritual no termina, solo evoluciona.</p>
-			</BlockInfo>
-		)
-	}
-
-	{
-		sections.filter(({ active }) => active).length < 10 && (
-			<section class="overflow-clip bg-blue-950 py-24">
-				<div class="gsap-text container">
-					<p class="font-display text-center text-5xl font-bold uppercase md:text-8xl">Próximamente</p>
-					<p class="mx-auto mt-6 w-12">
-						<SvgArrowDown />
-					</p>
-				</div>
-			</section>
-		)
-	}
 </Layout>
