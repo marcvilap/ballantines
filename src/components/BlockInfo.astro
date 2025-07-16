@@ -14,7 +14,7 @@ const { id, banner, image, title, inverse } = Astro.props
 
 <section id={id} class="relative min-h-screen overflow-clip py-24">
 	<Image class="gsap-banner absolute top-0 left-0 size-full object-cover" src={banner} width={1920} alt="" format="avif" quality={50} />
-	<div class="relative container">
+	<div class="relative">
 		<h2 class:list={['gsap-title font-display max-w-171 text-right text-5xl font-bold text-pretty uppercase md:text-7xl', inverse && 'ml-auto']}>{title}</h2>
 	</div>
 </section>
