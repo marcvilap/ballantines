@@ -1,23 +1,14 @@
 ---
 import { Image } from 'astro:assets'
 
-interface Props {
-	id: string
-	banner: ImageMetadata
-	image: ImageMetadata
-	title: string
-	inverse?: boolean
-}
-
-const { id, banner, image, title, inverse } = Astro.props
+const { id, banner, title, inverse, image, hasOverlay } = Astro.props
 ---
 
 <section id={id} class="relative min-h-screen overflow-clip py-24">
-	<!-- Imagen de fondo con overlay -->
+	<!-- Imagen de fondo con overlay condicional -->
 	<div class="absolute inset-0">
 		<Image class="gsap-banner size-full object-cover" src={banner} width={1920} alt="" format="avif" quality={50} />
-		<div class="absolute inset-0 bg-black/50"></div>
-		<!-- Filtro negro -->
+		{hasOverlay && <div class="absolute inset-0 bg-black/50" />}
 	</div>
 
 	<!-- Contenido -->
@@ -30,11 +21,10 @@ const { id, banner, image, title, inverse } = Astro.props
 
 <section class="flex min-h-screen items-center overflow-clip bg-blue-900 py-24">
 	<div class="container grid items-center gap-24 lg:grid-cols-2">
-		<!-- Imagen lateral con overlay -->
+		<!-- Imagen lateral con overlay condicional -->
 		<div class="relative overflow-clip">
 			<Image class="gsap-image w-full object-cover" src={image} width={744} densities={[2]} alt="" format="avif" quality={50} />
-			<div class="absolute inset-0 bg-black/50"></div>
-			<!-- Filtro negro -->
+			{hasOverlay && <div class="absolute inset-0 bg-black/50" />}
 		</div>
 
 		<!-- Texto -->
