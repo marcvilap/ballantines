@@ -39,7 +39,7 @@ const { id, banner, image, title, inverse } = Astro.props
 
 		<!-- Texto -->
 		<div class:list={['gsap-text relative z-10', inverse && '-order-1']}>
-			<h3 class="font-display max-w-86 text-right text-4xl font-bold uppercase">{title}</h3>
+			<h3 class="font-display max-w-86 text-right text-4xl font-bold uppercase lg:max-w-[16rem]">{title}</h3>
 			<div class="mt-6 grid gap-6 md:pl-24">
 				<slot />
 			</div>
